@@ -4,6 +4,7 @@ using namespace std;
 #define THRESHOLD 28
 void MergeSort(int r[],  int s, int t);				// 二路归并分组排序
 void Merge(int r[], int r1[], int s, int m, int t);	// 合并每两组
+void InsertSort(int a[],int low,int high);
 
 
 int main()
@@ -47,14 +48,14 @@ void MergeSort(int r[], int s, int t)
   int m;
   int r1[1000] = {0};
   if (s == t) return;				// 递归的边界条件
-  else if(s + 1 == t) {				// 如果只有两个元素，直接交换
-	int tmp = r[t];
-	r[t] = r[s];
-	r[s] = tmp;
-  }
-  //else if(t - s == THRESHOLD) {
-	//InsertSort(int[] list,int low,high);
+  //else if(s + 1 == t) {				// 如果只有两个元素，直接交换
+//	int tmp = r[t];
+//	r[t] = r[s];
+//	r[s] = tmp;
   //}
+  else if(t - s == THRESHOLD) {
+	InsertSort(r, s, t);
+  }
   else { 
     m = (s + t)/2;                  // 划分
     MergeSort(r, s, m);				// 求解子问题1，归并排序前半个子序列
@@ -68,7 +69,7 @@ void MergeSort(int r[], int s, int t)
 /*
  * 插入排序
  */
-void InsertSort(int[] list,int low,int high)
+void InsertSort(int list[],int low,int high)
 {
 	for (int i = low; i < high; i++)
 	{
