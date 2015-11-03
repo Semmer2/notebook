@@ -25,7 +25,7 @@ C文件操作
 正常返回写入的字符，错误返回EOF
 
     char *fgets(char *str,int n,FILE *fp)
-读取一行数据，从fp中获取n-1个字符存入str.正确返回str值，错误返回NULL.应用feof()或ferror()函数来判别是读取到了文件尾，还是发生了错误
+读取一行数据，以英文空格和换行符为界符．从fp中获取n-1个字符存入str.正确返回str值，错误返回NULL.应用feof()或ferror()函数来判别是读取到了文件尾，还是发生了错误
 
     int fputs(char *str,FILE *fp); 
 正常返回： 写入文件的字符个数，即字符串的长度。非正常返回：返回一个NULL值，此时应当用feof()或ferror()函数来判别是读取到了文件尾，还是发生了错误。
