@@ -5,6 +5,7 @@
 类型：饿汉模式、懒汉模式
 
 下面以Java为示例说明。
+[单例模式的七种写法](http://cantellow.iteye.com/blog/838473)
 
 ## 饿汉模式
 创建静态实例，在类加载时就创建对象。
@@ -19,7 +20,6 @@
 		}
 		//2.创建类的唯一实例，使用private static修饰
 		private static Singleton instance=new Singleton();
-		
 		//3.提供一个用于获取实例的方法，使用public static修饰
 		public static Singleton getInstance(){
 			return instance;
@@ -39,7 +39,6 @@
 		}
 		//2.声明类的唯一实例，使用private static修饰
 		private static Singleton2 instance;
-		
 		//3.提供一个用于获取实例的方法，使用public static修饰
 		public static Singleton2 getInstance(){
 			if(instance==null){
@@ -82,6 +81,7 @@
 
 ### 使用枚举
 这种方式是Effective Java作者Josh Bloch 提倡的方式，它不仅能避免多线程同步问题，而且还能防止反序列化重新创建新的对象。
+[Java枚举](http://www.cnblogs.com/linjiqin/archive/2011/02/11/1951632.html)
 
 	public enum Singleton {
 	    INSTANCE;
