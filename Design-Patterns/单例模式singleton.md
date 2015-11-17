@@ -6,7 +6,7 @@
 
 下面以Java为示例说明。
 
-# 饿汉模式
+## 饿汉模式
 创建静态实例，在类加载时就创建对象。
 
 1. 构造方法私有化；
@@ -17,7 +17,6 @@
 		//1.将构造方法私有化，不允许外部直接创建对象
 		private Singleton(){		
 		}
-		
 		//2.创建类的唯一实例，使用private static修饰
 		private static Singleton instance=new Singleton();
 		
@@ -27,7 +26,7 @@
 		}
 	}
 
-# 懒汉模式
+## 懒汉模式
 声明静态实例，在第一次使用时才创建对象。
 
 1. 构造方法私有化；
@@ -38,7 +37,6 @@
 		//1.将构造方式私有化，不允许外边直接创建对象
 		private Singleton2(){
 		}
-		
 		//2.声明类的唯一实例，使用private static修饰
 		private static Singleton2 instance;
 		
@@ -51,13 +49,13 @@
 		}
 	}
 
-# 饿汉模式和懒汉模式区别
+## 饿汉模式和懒汉模式区别
 1. 加载类或获取对象的快慢；
 2. 懒汉线程不安全。如果是多线程，懒汉模式可能由于`if`语句导致创建了多个对象。
 
-# 拓展
+## 拓展
 
-## 懒汉线程安全的写法
+### 懒汉线程安全的写法
 
 	public class Singleton {
 	    private static Singleton instance;
@@ -70,7 +68,7 @@
 	    }
 	}
 
-## 静态内部类保证线程安全且不在类初始化时就被加载
+### 静态内部类保证线程安全且不在类初始化时就被加载
 
 	public class Singleton {
 	    private static class SingletonHolder {
@@ -82,7 +80,7 @@
 	    }
 	}
 
-## 使用枚举
+### 使用枚举
 这种方式是Effective Java作者Josh Bloch 提倡的方式，它不仅能避免多线程同步问题，而且还能防止反序列化重新创建新的对象。
 
 	public enum Singleton {
@@ -91,7 +89,7 @@
 	    }
 	}
 
-## 双重校验锁
+### 双重校验锁
 
 	public class Singleton {
 	    private volatile static Singleton singleton;
