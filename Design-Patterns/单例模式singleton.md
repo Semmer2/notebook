@@ -10,18 +10,18 @@
 ## 饿汉模式
 创建静态实例，在类加载时就创建对象。
 
-1. 构造方法私有化;
-2. 创建静态私有对象;
-3. 提供获取实例的静态公有方法;
+* 构造方法私有化;
+* 创建静态私有对象;
+* 提供获取实例的静态公有方法;
 
 
 	public class Singleton {
-		//1.将构造方法私有化，不允许外部直接创建对象
+		//将构造方法私有化，不允许外部直接创建对象
 		private Singleton(){
 		}
-		//2.创建类的唯一实例，使用private static修饰
+		//创建类的唯一实例，使用private static修饰
 		private static Singleton instance=new Singleton();
-		//3.提供一个用于获取实例的方法，使用public static修饰
+		//提供一个用于获取实例的方法，使用public static修饰
 		public static Singleton getInstance(){
 			return instance;
 		}
@@ -31,18 +31,17 @@
 ## 懒汉模式
 声明静态实例，在第一次使用时才创建对象。
 
-1. 构造方法私有化;
-2. 声明静态私有对象;
-3. 提供获取实例的静态公有方法;
-
+* 构造方法私有化;
+* 声明静态私有对象;
+* 提供获取实例的静态公有方法;
 
 	public class Singleton2 {
-		//1.将构造方式私有化，不允许外边直接创建对象
+		//将构造方式私有化，不允许外边直接创建对象
 		private Singleton2(){
 		}
-		//2.声明类的唯一实例，使用private static修饰
+		//声明类的唯一实例，使用private static修饰
 		private static Singleton2 instance;
-		//3.提供一个用于获取实例的方法，使用public static修饰
+		//提供一个用于获取实例的方法，使用public static修饰
 		public static Singleton2 getInstance(){
 			if(instance==null){
 				instance=new Singleton2();
