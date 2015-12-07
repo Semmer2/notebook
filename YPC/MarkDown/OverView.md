@@ -42,9 +42,9 @@
 * 1983. something, you can type a \,just like
 * 1983\. something
 
-#### program block
+#### 程序块
 
-* the begin with 4 spaaces or a tabcan be take as a paragraph
+  the begin with 4 spaaces or a tabcan be take as a paragraph
   just like this
   untill the tab or 4 sapces is vanished
   this is a demo
@@ -68,6 +68,14 @@ finished
 
 ## paragraph element
 #### link
-
+###### 行内式
 * use the ( to close the link,just like(http://www.baidu.com)
-* or like this(http://www.baidu.com "Baidu")
+* or like this [百度](http://www.baidu.com "Baidu")
+* 如果访问主机资源，可以使用相对路径[About](/about/)
+
+###### 参考式
+* 这是一个参考是示例[例子][id]
+[id]:http://www.baidu.com
+* id的标识可以再文件的任意位置
+* 如果id为空，则标识符为名字，例如[例子][]
+[例子]:http://www.baidu.com
