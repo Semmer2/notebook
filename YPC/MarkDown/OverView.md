@@ -108,5 +108,10 @@ finished
 * 接着是()，里面是图片的地址
 
 ###### 参考式
-* 
+* ![Alt text][id]
+[id]:url/to/image "optional tittle"
+
+## 其他
+#### 自动链接
+
 
