@@ -6,11 +6,13 @@
 
 ### 2.分析
 
+```
 根据console窗口显示，错误信息出在appcompat_v7 -> res -> values-v23 -> styles_base.xml 中，具体信息为<style name="Base.Widget.AppCompat.Button.Colored" parent="android:Widget.Material.Button.Colored" />
 [2016-01-27 17:49:37 - appcompat_v7] E:\AndroidDevelopment\eclipse\WorkSpace\appcompat_v7\res\values-v23\styles_base.xml:20: error: Error retrieving parent for item: No resource found that matches the given name 'android:Widget.Material.Button.Colored'.
 [2016-01-27 17:49:37 - appcompat_v7] 
 [2016-01-27 17:49:37 - appcompat_v7] E:\AndroidDevelopment\eclipse\WorkSpace\appcompat_v7\res\values-v23\styles_base_text.xml:19: ##error: Error retrieving parent for item: No resource found that matches the given name 'android:TextAppearance.Material.Widget.Button.Inverse'.##
 [2016-01-27 17:49:37 - appcompat_v7]
+```
 
 ### 3.解决
 
