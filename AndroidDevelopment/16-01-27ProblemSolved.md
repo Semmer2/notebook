@@ -16,7 +16,7 @@
 
 ### 3.解决
 
-百度相关信息发现一下网站[http://www.phperz.com/article/14/1204/39233.html]，按照他提供的方法，可知问题是因为所需的依赖包没能正确安装。根据第一个解决办法可知，需要安装SDK Platform & Android Support Repository & Android Support Library & Google Play service & Google Repository这些东西，因为暂时没有wifi所以选择第二种方法。
+百度相关信息发现一下网站[解决网站](http://www.phperz.com/article/14/1204/39233.html "PHOERZ")，按照他提供的方法，可知问题是因为所需的依赖包没能正确安装。根据第一个解决办法可知，需要安装SDK Platform & Android Support Repository & Android Support Library & Google Play service & Google Repository这些东西，因为暂时没有wifi所以选择第二种方法。
 即在创建新android工程时，将minimum required SDK 设置为4.1及以上即可，也就是不使用appcompat_v7，据此，我猜测这个文件夹是为了兼容性所创建的。
 
 ### 至此，所有问题解决
