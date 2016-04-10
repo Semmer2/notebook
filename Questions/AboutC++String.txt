@@ -1,0 +1,1 @@
+Why the string=str[1]+str[2] is different from string+=str[1]; string+=str[2];
